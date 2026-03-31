@@ -1,0 +1,8 @@
+{
+  "type": "ContactSection",
+  "sectionLabel": "Fale Conosco",
+  "heading": "Agende uma Consulta",
+  "description": "Preencha o formulário abaixo e nossa equipe entrará em contato para agendar seu atendimento.",
+  "submitLabel": "Enviar Mensagem",
+  "submittingLabel": "Enviando..."
+}

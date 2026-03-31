@@ -1,0 +1,13 @@
+{
+  "type": "AboutSection",
+  "sectionLabel": "Quem Sou",
+  "name": "Dra. Meriellin Barbosa Rodrigues",
+  "photo": "https://img.usecurling.com/ppl/large?gender=female&seed=mbr",
+  "photoAlt": "Dra. Meriellin Barbosa Rodrigues",
+  "paragraphs": [
+    "Com uma trajetória marcada pela excelência técnica e pela empatia profunda, a Dra. Meriellin fundou a MBR Advocacia com um propósito claro: oferecer um atendimento jurídico onde o cliente não é apenas um número de processo.",
+    "Especialista em resoluções complexas, sua abordagem combina o rigor da lei com a sensibilidade necessária para lidar com questões delicadas, especialmente no âmbito familiar e sucessório.",
+    "\"Acredito que a verdadeira justiça começa na escuta atenta. Cada caso carrega uma história, e nossa missão é proteger não apenas o patrimônio, mas a paz de espírito dos nossos clientes.\""
+  ],
+  "tagline": "Atuação Técnica e Humana"
+}

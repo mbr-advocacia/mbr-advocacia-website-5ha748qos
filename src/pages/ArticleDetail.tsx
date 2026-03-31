@@ -1,17 +1,27 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { articles, type Article } from '@/lib/data'
 import { FadeIn } from '@/components/ui/fade-in'
+import articlesData from '../../content/data/articles.json'
+
+interface Article {
+  id: string
+  title: string
+  date: string
+  excerpt: string
+  content: string[]
+}
 
 const ArticleDetail = () => {
   const { id } = useParams<{ id: string }>()
   const [article, setArticle] = useState<Article | null>(null)
+  const [articleIndex, setArticleIndex] = useState(-1)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    const found = articles.find((a) => a.id === id)
-    setArticle(found || null)
+    const idx = articlesData.articles.findIndex((a) => a.id === id)
+    setArticleIndex(idx)
+    setArticle(idx >= 0 ? articlesData.articles[idx] : null)
   }, [id])
 
   if (!article) {
@@ -26,7 +36,10 @@ const ArticleDetail = () => {
   }
 
   return (
-    <article className="pt-32 pb-24 md:pb-32 bg-background min-h-screen">
+    <article
+      className="pt-32 pb-24 md:pb-32 bg-background min-h-screen"
+      data-sb-object-id="content/data/articles.json"
+    >
       <div className="container mx-auto px-6 md:px-12 max-w-3xl">
         <FadeIn>
           <Link
@@ -36,9 +49,14 @@ const ArticleDetail = () => {
             <ArrowLeft size={16} /> Voltar
           </Link>
 
-          <header className="mb-12">
-            <span className="text-primary text-sm font-mono block mb-6">{article.date}</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-tight mb-8">
+          <header className="mb-12" data-sb-field-path={`articles.${articleIndex}`}>
+            <span className="text-primary text-sm font-mono block mb-6" data-sb-field-path=".date">
+              {article.date}
+            </span>
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-tight mb-8"
+              data-sb-field-path=".title"
+            >
               {article.title}
             </h1>
             <div className="w-16 h-[1px] bg-primary" />
@@ -48,7 +66,11 @@ const ArticleDetail = () => {
         <FadeIn delay={200}>
           <div className="prose prose-lg md:prose-xl prose-stone max-w-none prose-p:font-light prose-p:leading-relaxed prose-headings:font-serif prose-a:text-primary">
             {article.content.map((paragraph, index) => (
-              <p key={index} className="text-foreground/80 mb-6">
+              <p
+                key={index}
+                className="text-foreground/80 mb-6"
+                data-sb-field-path={`articles.${articleIndex}.content.${index}`}
+              >
                 {paragraph}
               </p>
             ))}

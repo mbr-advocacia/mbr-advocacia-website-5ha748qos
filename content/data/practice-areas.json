@@ -1,0 +1,31 @@
+{
+  "type": "PracticeAreasSection",
+  "sectionLabel": "Especialidades",
+  "heading": "Áreas de Atuação",
+  "areas": [
+    {
+      "id": "familia",
+      "title": "Direito de Família",
+      "description": "Atuação sensível e técnica em divórcios, pensão alimentícia, guarda e convivência, sempre priorizando a resolução de conflitos de forma humanizada.",
+      "icon": "Heart"
+    },
+    {
+      "id": "sucessoes",
+      "title": "Sucessões",
+      "description": "Planejamento sucessório, inventários extrajudiciais e judiciais, testamentos e partilha de bens com segurança e clareza para a família.",
+      "icon": "Briefcase"
+    },
+    {
+      "id": "previdenciario",
+      "title": "Previdenciário",
+      "description": "Análise e planejamento de aposentadorias, benefícios por incapacidade e pensão por morte, garantindo seus direitos perante o INSS.",
+      "icon": "Shield"
+    },
+    {
+      "id": "civel",
+      "title": "Cível e Contratos",
+      "description": "Elaboração e revisão de contratos, responsabilidade civil e litígios cíveis em geral, com foco na prevenção de riscos e proteção patrimonial.",
+      "icon": "FileText"
+    }
+  ]
+}

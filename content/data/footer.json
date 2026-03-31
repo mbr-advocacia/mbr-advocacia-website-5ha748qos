@@ -1,0 +1,21 @@
+{
+  "type": "Footer",
+  "logoText": "MBR",
+  "tagline": "Advocacia estratégica com sensibilidade e precisão. Atuação técnica e humana focada em resultados.",
+  "quickLinksTitle": "Links Rápidos",
+  "connectTitle": "Conecte-se",
+  "instagramUrl": "#",
+  "linkedinUrl": "#",
+  "copyrightName": "Meriellin Barbosa Rodrigues",
+  "oab": "OAB/SP 000.000",
+  "offices": [
+    {
+      "city": "Jaú",
+      "address": "Endereço do escritório em Jaú"
+    },
+    {
+      "city": "Dois Córregos",
+      "address": "Endereço do escritório em Dois Córregos"
+    }
+  ]
+}

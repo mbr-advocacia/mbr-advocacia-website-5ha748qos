@@ -17,9 +17,11 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "tailwind.config.ts", "*.tsx"]
+  "include": ["src", "content", "tailwind.config.ts", "*.tsx"]
 }
